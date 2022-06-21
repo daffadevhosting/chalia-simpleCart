@@ -26,6 +26,7 @@
 <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
+  <link rel="manifest" href="/manifest.json">
   <meta property="og:url" content="http://localhost:4000/checkout/">
   <meta property="og:title" content="Checkout">
   <meta property="og:description" content="Total Pembelian  Bungkus : ( *Belum Termasuk Ongkir )        Nama Lengkap                Nomor WhatsApp                Alamat Email                        Ku...">
@@ -220,6 +221,13 @@ $(document).ready(function(){
       <script async src="http://localhost:4000/js/formOrder.js"></script>
     
 
+<script>
+  if('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+    })
+  }
+</script>
   </body>
 
 </html>

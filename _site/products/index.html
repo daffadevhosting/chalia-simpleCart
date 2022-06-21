@@ -26,6 +26,7 @@
 <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
+  <link rel="manifest" href="/manifest.json">
   <meta property="og:url" content="http://localhost:4000/products/">
   <meta property="og:title" content="Chalia Products">
   <meta property="og:description" content="Toserba di Sumedang.">
@@ -351,6 +352,13 @@ let slideIndex=0;function showSlides(){let a,b=document.getElementsByClassName("
 
     
 
+<script>
+  if('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+    })
+  }
+</script>
   </body>
 
 </html>

@@ -26,6 +26,7 @@
 <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
+  <link rel="manifest" href="/manifest.json">
   <meta property="og:url" content="http://localhost:4000/products/basreng/">
   <meta property="og:title" content="Basreng Pedas Gila">
   <meta property="og:description" content="Basreng atau baso goreng merupakan camilan khas dari Bandung.">
@@ -208,6 +209,13 @@ $(document).ready(function(){
 
     
 
+<script>
+  if('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+    })
+  }
+</script>
   </body>
 
 </html>
