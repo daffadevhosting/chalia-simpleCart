@@ -1,0 +1,39 @@
+/* Site Footer
+-------------------------------------------------- */
+
+.site-footer {
+  padding: 40px 0;
+  font-size: 14px;
+  color: #fff;
+  background: #121212;
+
+  p {
+    margin-bottom: 0;
+  }
+
+}
+
+.site-mobile-footer {
+    @include mobile {
+  padding-bottom: 120px;}
+    }
+
+.section-padding {
+    padding: 40px 0;
+}
+
+.bg-white {
+    background-color: $background!important;
+}
+
+.text-right {
+    text-align: right!important;
+  @include mobile {
+    text-align: center!important;}
+}
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+  @include mobile {
+    text-align: center!important;}
+}

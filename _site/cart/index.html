@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+  <meta charset="UTF-8">
+
+  <title>Cart</title>
+
+  <meta name="description" content="{% include keranjang.html %}">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="canonical" href="http://localhost:4000/cart/">
+  <link rel="alternate" type="application/rss+xml" title="Chalia Grocery" href="http://localhost:4000/feed.xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/site.webmanifest">
+<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="Chalia">
+<meta name="application-name" content="Chalia">
+<meta name="msapplication-TileColor" content="#603cba">
+<meta name="msapplication-TileImage" content="/assets/favicon/mstile-144x144.png">
+<meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+  <meta property="og:url" content="http://localhost:4000/cart/">
+  <meta property="og:title" content="Cart">
+  <meta property="og:description" content="{% include keranjang.html %}">
+  <meta property="og:image" content="http://localhost:4000/images/default.jpg">
+
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Martel:200,700,900|Open+Sans:400,700|Roboto+Condensed:700">
+  <link rel="stylesheet" href="http://localhost:4000/css/main.css">
+  <link rel="stylesheet" href="http://localhost:4000/css/scrollbar.css">
+
+</head>
+
+
+  <body class="full-width-content" itemscope itemtype="http://schema.org/WebPage">
+  <style>
+.preloader{background:#231f20;position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999999999}.preloader .loading{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font:14px arial;}.loading-text{position:fixed;bottom:0;margin-bottom:150px;left:50%;right:50%;font-family:system-ui}.rubberBand{-webkit-animation-name:rubberBand;animation-name:rubberBand;-webkit-animation-duration:1s;animation-duration:1s;animation: rubberBand 1s infinite;-webkit-animation-fill-mode:both;animation-fill-mode:both}@-webkit-keyframes rubberBand{0%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}30%{-webkit-transform:scale3d(1.25,.75,1);transform:scale3d(1.25,.75,1)}40%{-webkit-transform:scale3d(.75,1.25,1);transform:scale3d(.75,1.25,1)}50%{-webkit-transform:scale3d(1.15,.85,1);transform:scale3d(1.15,.85,1)}65%{-webkit-transform:scale3d(.95,1.05,1);transform:scale3d(.95,1.05,1)}75%{-webkit-transform:scale3d(1.05,.95,1);transform:scale3d(1.05,.95,1)}100%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}@keyframes rubberBand{0%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}30%{-webkit-transform:scale3d(1.25,.75,1);transform:scale3d(1.25,.75,1)}40%{-webkit-transform:scale3d(.75,1.25,1);transform:scale3d(.75,1.25,1)}50%{-webkit-transform:scale3d(1.15,.85,1);transform:scale3d(1.15,.85,1)}65%{-webkit-transform:scale3d(.95,1.05,1);transform:scale3d(.95,1.05,1)}75%{-webkit-transform:scale3d(1.05,.95,1);transform:scale3d(1.05,.95,1)}100%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}×
+</style>
+    <script src="http://localhost:4000/js/jquery-2.2.4.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(window).load(function(){
+    $(".preloader").delay(2500).fadeOut(550);
+  });
+  })
+</script>
+<content class="preloader" fullscreen>
+  <div class="loading">
+    <img class="rubberBand" src="/images/logo/logo.webp" width="80">
+  </div>
+</content>
+
+
+    <div class="site-container">
+
+      <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+      <![endif]-->
+
+      <header class="site-header" itemscope itemtype="http://schema.org/WPHeader" >
+  <div class="wrap-nav">
+
+    <div class="title-area">
+      <a href="/products"><img src="/images/logo/logo-footer.png" class="navbar-brand" itemprop="headline" alt="Chalia Grocery"/></a>
+    </div>
+
+    <nav class="nav-primary" itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="Main navigation">
+  <ul class="jekyll-nav-menu">
+
+    
+
+      <li class="menu-item">
+        <a href="/products/">Products</a>
+
+        
+
+      </li>
+
+    
+
+      <li class="menu-item">
+        <a href="/blog/">Blog</a>
+
+        
+
+      </li>
+
+    
+
+    <li class="menu-item cart active">
+      <a href="/cart/" id="cart-menu">Cart <span class="fa fa-shopping-cart"></span> <span class="simpleCart_quantity" style="position: absolute;padding: 0 6px;background: darkred;color: white;border-radius: 50%;top: 5px;right: -10px;"></span></a>
+    </li>
+</nav>
+  </ul>
+
+
+    <nav class="nav-secondary mobile-show" itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="Secondary navigation" style="display:none">
+      <ul class="jekyll-nav-menu">
+        <li class="menu-item">
+          <a href="/cart/" id="cart-menu">Cart <span class="fa fa-shopping-cart"></span> <span class="simpleCart_quantity" style="padding: 2px 5px;border-radius:50%;background:orangered;position:relative;top:-10px;right:10px;"></span></a>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+
+      <div class="site-inner">
+  <div class="wrap">
+    <div class="content-sidebar-wrap">
+
+      <main class="content">
+        <article class="page entry" itemscope itemtype="http://schema.org/CreativeWork">
+
+          <header class="entry-header">
+            <h1 class="entry-title" itemprop="headline">Cart</h1>
+          </header>
+
+          <div class="entry-content" itemprop="text">
+            <div class="simplecart-area">
+  
+<style>
+.keranjang.dekstop{position:relative;width:60px;text-align:left;padding:5px 0;-webkit-box-ordinal-group:3;-ms-flex-order:3;order:3;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+.notif-tambah-product{width:255px;position:absolute;z-index:99;font-size:14px;right:-10px;background:#00b35e;padding:10px 20px;opacity:1;display:none;color:#fff;top:65px;border-radius:15px;-webkit-box-shadow:0 2px 5px 0 rgba(56,56,56,.49);box-shadow:0 2px 5px 0 rgba(56,56,56,.49);}
+.keranjang .simpleCart_quantity{width:20px;height:20px;background:#ff0000;position:absolute;border-radius:100%;color:#ffffff;text-align:center;line-height:20px;font-size:12px;z-index:3}
+.keranjang.dekstop .simpleCart_quantity{top:3px;left:30px;}
+.keranjang-box{overflow-x:hidden;overflow-y:auto}
+.keranjang-box .close-keranjang{position:absolute;right:15px;padding:5px;border:1px solid #ddd;border-radius:15px;font-size:10px;font-weight:600}
+.keranjang-box .close-keranjang a.tombol-bukatutup{width:auto;background:transparent;color:#444444;padding:0 2px}
+.background-transparent-box{position:fixed;z-index:999;top:0;left:0;width:100%;height:100%;background:rgba(0, 0, 0, 0.5);display:none;}
+.keranjang.dekstop .keranjang-icon{display:inline-block;padding:7px;margin:3px 0 3px 5px;border-radius:20px;width:24px;height:24px;cursor:pointer;-webkit-transition:all .2s;transition:all .2s}
+.keranjang.dekstop .keranjang-icon svg{height:22px;width:22px;display:inline-block;}
+.keranjang.dekstop .keranjang-icon path{fill:#ffffff;}
+@media only screen and (max-width:767px){.is-post .keranjang.mobile,.keranjang.dekstop{display:none;}.is-post .keranjang.dekstop{display:block;}.keranjang.mobile{position:relative;display:block;width:100%;text-align:center;}.keranjang.mobile .keranjang-icon{display:block;width:100%;height:100%;text-align:center;margin:0 auto;border-ridius:0;}.keranjang.mobile .keranjang-icon svg{position:relative;display:block;margin:0 auto;width:36px;height:36px;}.keranjang.mobile .keranjang-icon path{fill:#444444;}.keranjang.mobile .simpleCart_quantity{top:-5px;left:50%;}}
+/* Tabel Daftar Belanja*/
+.keranjang-box .simpleCart_items::-webkit-scrollbar{width:2px;background-color:transparent}
+.keranjang-box:hover .simpleCart_items::-webkit-scrollbar-thumb{background-color:#ddd;border-radius:5px}
+.keranjang-box .headerRow,.keranjang-box .item-price{display:block}
+.keranjang-box .simpleCart_items{max-height: 250px;overflow-y:auto;margin-bottom:20px;padding: 10px 10px 0 10px;/*box-shadow: inset #33333387 0 3px 1px -2px, inset #33333387 0 2px 2px 0, inset #33333387 0 1px 5px 0;*/border-radius: 3px;}
+.keranjang-box .itemRow{overflow:hidden;font-size:12px;line-height:1.5;width:100%;font-weight:700;display:inline-block;margin-bottom: 10px;}
+.keranjang-box .simpleCart_items::after {content: "";text-align: center;z-index: 0;position: absolute;top: 50px;left: 50%;padding: 10px;transform: translate(-50%,-45%);max-width: 500px;width: 90%;overflow: hidden;margin: auto;}
+.keranjang-box .item-thumb{float:left;}
+.keranjang-box .item-thumb img{object-fit:cover;width:95px;height:95px;border-radius:.3rem;float:left;margin:0 10px 0 0}
+.keranjang-box .item-decrement,.item-quantity,.keranjang-box .item-increment{font-size:12px;display:table-cell}
+.keranjang-box .item-berat {display: none;}
+.keranjang-box .item-totalberat {display: none;}
+.keranjang-box .item-name{font-size:13px;display:inline-block}
+.keranjang-box .item-pilihan1,.keranjang-box .item-pilihan2,.keranjang-box .item-varian1,.keranjang-box .item-varian2,.item-total{font-size:10px}
+.keranjang-box .item-pilihan1,.keranjang-box .item-pilihan2{float:left;margin-right:5px}
+.keranjang-box .item-quantity{padding:0 10px;font-size:14px;vertical-align:middle}
+.keranjang-box .item-total{color:#ff460c;font-weight:600;font-size:14px}
+.keranjang-box sp.sub-total{display:inline-block;color:#333}
+.keranjang-box .item-remove,.simpleCart_items .item-remove{float:right;display:block;position:relative;}
+.keranjang-box .item-link {display: none;margin: 3px -5px -5px;padding: 3px 5px;}.keranjang-box .simpleCart_increment{background-image:url("data:image/svg+xml,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z' fill='%23a6a6ad'/></svg>")!important}
+.keranjang-box .simpleCart_increment,.keranjang-box .simpleCart_decrement{width:20px;height:20px;cursor:pointer;display:inline-block;background-image:url("data:image/svg+xml,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M7,13H17V11H7' fill='%23a6a6ad'/></svg>");background-size:20px 20px;background-position:center center;background-repeat:no-repeat;vertical-align:middle;text-indent:-9999px}
+.keranjang-box .item-remove a.simpleCart_remove,.simpleCart_items .item-remove a.simpleCart_remove{display:block;width:20px;height:20px;background:url("data:image/svg+xml,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8.46,11.88L9.87,10.47L12,12.59L14.12,10.47L15.53,11.88L13.41,14L15.53,16.12L14.12,17.53L12,15.41L9.88,17.53L8.47,16.12L10.59,14L8.46,11.88M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z' fill='%23a6a6ad'/></svg>") no-repeat;text-indent:-9999px;background-size:20px}
+.keranjang-box a.view-cart,.keranjang-box a.tombol-bukatutup{position:relative;display:inline-block;color:#ffffff;padding:5px 10px;border-radius:15px;text-align:center;width:40%}
+.keranjang-box a.view-cart{background:#20d374}
+.keranjang-box a.tombol-bukatutup{background:#ff5621}
+.keranjang-box a.view-cart:after{content: "Bayar Sekarang";}
+.keranjang-box a.view-cart.active:after{content: "Tutup";}
+.keranjang-box .ck-btn{margin-bottom:10px;text-align:center}
+.keranjang-box .harga-total{margin:0 0 10px;padding:0 8px;font-size:14px;font-weight:500}
+.keranjang-box span.simpleCart_total{font-size:16px;font-weight:600;color:#ff460c}
+#jam, #menit, #detik{display:inline-block;}
+#jam-digital,#hasil,.wrapper-footer,.fab{display:none;}
+.produk-page {margin:0px!important;}
+span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff460c;}
+</style>
+  <div class="keranjang-box simplecart-cart">
+    <div class="simpleCart_items"></div>
+    <div class="harga-total">
+   <span>Total Pembelian </span><span class="simpleCart_quantity"></span> Bungkus : <span class="simpleCart_total"></span><br />
+<span style="font-size:10px;">( *Belum Termasuk Ongkir )</span>
+    
+<button onclick="checkOut()" style="margin-top:20px;float:right;">CheckOut</button>
+
+    </div>
+</div>
+<script>
+function checkOut() {
+  location.replace("/checkout")
+}
+</script>
+
+</div>
+
+          </div>
+
+        </article>
+      </main>
+
+      
+
+    </div>
+  </div>
+</div>
+
+        
+      <footer class="site-footer " itemscope itemtype="http://schema.org/WPFooter" >
+  <div class="wrap">
+    <div class="row no-gutters">
+<div class="col-lg-6 col-sm-6">
+<p class="mt-1 mb-0"><a href="http://localhost:4000">Chalia Grocery</a> &copy; 2022</p><small>Template by <a id="footer" href="http://github.com/" rel="nofollow">NdanG</a></small></div> 
+<div class="col-lg-6 col-sm-6 text-right">
+<img class="logo-pay" alt="payment logo" src="/images/logo/pay-logo.webp" style="width:320px;">
+</div>
+  </div>
+    </div>
+</footer>
+
+
+    </div>
+            
+
+    <script src="http://localhost:4000/js/jquery-2.2.4.min.js"></script>
+    <script src="http://localhost:4000/js/simpleCart.js"></script>
+    <script async src="http://localhost:4000/js/main.js"></script>
+    <script async src="http://localhost:4000/js/responsive-menu.js"></script>
+
+    
+
+    
+
+  </body>
+
+</html>
+

@@ -1,0 +1,21 @@
+      {% if page.url == '/products/' %}
+<script>
+let slideIndex=0;function showSlides(){let a,b=document.getElementsByClassName("mySlides"),c=document.getElementsByClassName("dot");for(a=0;a<b.length;a++)b[a].style.display="none";for(++slideIndex>b.length&&(slideIndex=1),a=0;a<c.length;a++)c[a].className=c[a].className.replace(" active","");b[slideIndex-1].style.display="block",c[slideIndex-1].className+=" active",setTimeout(showSlides,2e3)}showSlides()
+</script>
+    {% endif %}
+
+    <script src="{{ site.url }}/js/jquery-2.2.4.min.js"></script>
+    <script src="{{ site.url }}/js/simpleCart.js"></script>
+    <script async src="{{ site.url }}/js/main.js"></script>
+    <script async src="{{ site.url }}/js/responsive-menu.js"></script>
+
+    {% if page.url contains '/products/' %}
+      <script async src="{{ site.url }}/js/style-picker.js"></script>
+      <script async src="{{ site.url }}/js/add-to-cart.js"></script>
+      <script async src="{{ site.url }}/js/lazyload.js"></script>
+    {% endif %}
+
+    {% if page.url == '/checkout/' %}
+      <script async src="{{ site.url }}/js/checkout.js"></script>
+      <script async src="{{ site.url }}/js/formOrder.js"></script>
+    {% endif %}

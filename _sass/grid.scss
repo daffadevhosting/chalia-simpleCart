@@ -1,0 +1,63 @@
+/* Grid
+-------------------------------------------------- */
+@media (min-width: 727px) {
+
+  .grid {
+    width: auto;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 30px;
+    animation: fade-up .7s ease-out forwards running;
+  }
+
+  .grid > * {
+    align-self: stretch;
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
+
+    &:first-child {
+      /*margin-left: 0;*/
+    }
+
+
+  }
+
+  .one-fourth,
+  .one-half,
+  .one-third,
+  .three-fourths,
+  .two-fourths,
+  .two-thirds {
+    flex: 0 0 auto;
+    float: left;
+    /*margin-left: 4%;*/
+  }
+
+  .one-half {
+    width: 48%;
+  }
+
+  .one-third {
+    width: 28%;
+  }
+
+  .two-thirds {
+    width: 65.3333333333%;
+  }
+
+  .one-fourth {
+    width: 22%;
+  }
+
+  .three-fourths {
+    width: 74%;
+  }
+
+  .first {
+    /*margin-left: 0;*/
+    clear: both;
+  }
+
+}

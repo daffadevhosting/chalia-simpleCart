@@ -1,0 +1,11 @@
+.mobile_hide{
+    display:block;
+  @include mobile {
+    display:none;}
+}
+
+.mobile_show{
+    display:none;
+  @include mobile {
+    display:block;}
+}

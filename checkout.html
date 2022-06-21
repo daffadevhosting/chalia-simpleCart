@@ -1,0 +1,55 @@
+---
+title: Checkout
+sitemap: false
+---
+
+<div class="harga-total">
+   <span>Total Pembelian </span><span class="simpleCart_quantity"></span> Bungkus : <span class="simpleCart_total"></span><br />
+<span style="font-size:10px;">( *Belum Termasuk Ongkir )</span>
+</div>
+<form class='wrapHead data-form validate-form' id='whatsapp-order'>
+<input class='order noAdmin' id='AdminToko' value='{{site.adminWa}}' type='hidden'/>
+<div class="form-row">
+      <section class="col-lg-4 col-sm-6">
+  <label>Nama Lengkap</label>
+  <input id="nama" type="text" class="nama wajib" placeholder="Nama Lengkap">
+      </section>
+
+      <section class="col-lg-4 col-sm-6">
+  <label>Nomor WhatsApp</label>
+  <input id="nomor" type="number" min="11" class="nomor wajib" placeholder="Nomor WhatsApp">
+      </section>
+</div>
+<div class="form-row">
+      <section class="col-lg-4 col-sm-6">
+  <label>Alamat Email</label>
+  <input id="email" type="email" class="email wajib" placeholder="Alamat E-mail">
+      </section>
+
+      <section class="col-lg-4 col-sm-6">
+          <label>Kurir</label>
+          <select class="informasi wajib" value="J%26T Express" placeholder="Pilih Kurir " interface="action-sheet">
+            <option value="J%26T Express">J&amp;T Express</option>
+            <option value="JNE Express">JNE Express</option>
+            <option value="*Grab Express">*GrabExpress</option>
+            <option value="*GoSend">*GoSend</option>
+          </select>
+      </section>
+</div>
+
+  <label>Alamat Pengiriman</label>
+  <input id="alamat" class="alamat wajib" placeholder="Alamat Rumah">
+  <input id="kota" class="kota wajib" placeholder="Kota">
+  <input id="provinsi" class="provinsi wajib" placeholder="Provinsi">
+  <input id="kodepos" class="kodepos wajib" placeholder="Kode Pos">
+
+  <a class="button order" id='order'>Send Order</a>
+</form>
+<style>.grecaptcha-badge{z-index:1;}</style>
+<div class="g-recaptcha"
+      data-sitekey="{{site.sitekey}}"
+      data-callback="onSubmit"
+      data-size="invisible">
+</div>
+<script>grecaptcha.execute();</script>
+

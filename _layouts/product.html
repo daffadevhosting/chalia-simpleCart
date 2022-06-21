@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<div class="site-inner">
+  <div class="wrap">
+    <div class="content-sidebar-wrap">
+      <main class="content single-product simpleCart_shelfItem" itemscope itemtype="http://schema.org/Product">
+
+        <section class="product-image">
+        				<img src="{{ page.featured_image_path }}" class="img-product item_thumb" itemprop="image">
+        </section>
+          <section class="product-details">
+            <h1 class="entry-title item_name" itemprop="name">{{ page.title }}</h1>
+            <div class="price-picker">
+          {% for item in page.items %}
+            <p id="product-{{ forloop.index }}" {% unless forloop.first %}class="display-none"{% endunless %}{% if forloop.first %} class="item_price"{% endif %}><span class="harga-text">Rp. {{ item.harga }}</span></p>
+          {% endfor %}
+            </div>
+            {{ content }}
+            <div class="product-picker">
+        <!--<div class="style-picker">
+          {% for style in page.styles %}
+            <div id="product-{{ forloop.index }}"{% if forloop.first %} class="item_warna"{% endif %} style="background-color: {{ style.color }}"><span class="display-none">{{ style.name }}</span></div>
+          {% endfor %}
+        </div>-->
+
+        <ul class="opsi-produk" id="items">
+          {% for item in page.items %}
+            <li id="product-{{ forloop.index }}"{% if forloop.first %} class="active item_ukuran"{% endif %} value="{{ item.sizes }}"> {{ item.sizes }}</li>
+          {% endfor %}
+        </ul>
+          <div class="flex-cart-btn">
+            <div class="plusminus">
+          <div class="quantity buttons_added">
+            <input type="button" value="-" class="minus" />
+            <input type="number" step="1" min="1" max="12" name="quantity" value="1" title="Qty" class="item_Quantity input-text qty text" size="4" pattern="" inputmode="" disabled/>
+            <input type="button" value="+" class="plus" />
+          </div></div>
+        <a id="item_add" class="item_add button" href="javascript:;"> Add to Cart </a></span>
+      </div>
+    </div>
+      </section>
+
+      </main>
+      <div id='hideMe' class="notif">Item sudah masuk keranjang.</div>
+      <script>
+        </script>
+    </div>
+  </div>
+</div>

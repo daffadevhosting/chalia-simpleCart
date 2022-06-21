@@ -1,0 +1,16 @@
+<div class="footer-widgets">
+  <div class="wrap">
+
+{% for data in site.data.widget %}
+    <div class="footer-widget-1 simpliCard">
+      <section class="col-lg-4 col-sm-6">
+        <div class="icon-widget"><i class="fa {{data.fa-icon}}" aria-hidden="true"></i></div>
+        <div class="widget-tex">
+        <small>{{data.small}}</small>
+        <p>{{data.p-text}}</p>
+      </section>
+    </div>
+{%endfor%}
+
+  </div>
+</div>
