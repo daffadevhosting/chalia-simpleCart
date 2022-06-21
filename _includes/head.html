@@ -11,6 +11,7 @@
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml">
   {% include favicon.html %}
+  <link rel="manifest" href="{{site.baseurl}}/manifest.json">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% elsif page.headline %}{{ page.headline }}{% else %}{{ site.title }}{% endif %}">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.content | strip_html | strip | strip_newlines | truncate: 160 }}{% endif %}">
