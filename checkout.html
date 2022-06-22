@@ -5,7 +5,7 @@ sitemap: false
  <script src="https://www.google.com/recaptcha/api.js"></script>
  <script>
    function onSubmit(token) {
-     document.getElementById("order").submit();
+     document.getElementById("AdminToko").submit();
    }
  </script>
 <div class="harga-total">
@@ -51,7 +51,7 @@ sitemap: false
 <button class="g-recaptcha order" 
         data-sitekey="{{site.sitekey}}" 
         data-callback='order' 
-        data-action='submit'>Order</button>
+        data-action='AdminToko'>Order</button>
 </form>
 <style>.grecaptcha-badge{z-index:1;}</style>
 
