@@ -36,6 +36,8 @@ workbox.precaching.precacheAndRoute([
   { url: '/blog/', revision: '{{ site.time | date: "%Y%m%d%H%M" }}' },
   { url: '/cart/', revision: '{{ site.time | date: "%Y%m%d%H%M" }}' },
   { url: '/checkout/', revision: '{{ site.time | date: "%Y%m%d%H%M" }}' },
+  { url: '/order-terkirim', revision: '{{ site.time | date: "%Y%m%d%H%M" }}' },
+  { url: '/link_bayar', revision: '{{ site.time | date: "%Y%m%d%H%M" }}' },
   { url: '/css/main.css', revision: '{{ site.time | date: "%Y%m%d%H%M" }}' }
 ])
 
