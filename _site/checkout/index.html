@@ -133,7 +133,7 @@ $(document).ready(function(){
              <script src="https://www.google.com/recaptcha/api.js"></script>
  <script>
    function onSubmit(token) {
-     document.getElementById("order").submit();
+     document.getElementById("AdminToko").submit();
    }
  </script>
 <div class="harga-total">
@@ -176,12 +176,17 @@ $(document).ready(function(){
   <input id="provinsi" class="provinsi wajib" placeholder="Provinsi">
   <input id="kodepos" class="kodepos wajib" placeholder="Kode Pos">
 
-<button class="g-recaptcha order" 
-        data-sitekey="6LfBwY0gAAAAACtYEWE7BXgxd5Nh-xPI9-VWmHSp" 
-        data-callback='order' 
-        data-action='submit'>Order</button>
+<a class="button order" id='order'>Send Order</a>
 </form>
 <style>.grecaptcha-badge{z-index:1;}</style>
+<div class="g-recaptcha"
+      data-sitekey="6LfBwY0gAAAAACtYEWE7BXgxd5Nh-xPI9-VWmHSp"
+      data-callback="order"
+      data-size="invisible">
+</div>
+<script>grecaptcha.execute();</script>
+
+  <!---->
 
 
           </div>
