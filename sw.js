@@ -33,6 +33,7 @@ workbox.precaching.precacheAndRoute([
   {% endfor -%}
   { url: '/', revision: '{{ site.time | date: "%Y%m%d%H%M" }}' },
   { url: '/products/', revision: '{{ site.time | date: "%Y%m%d%H%M" }}' },
+  { url: '/blog/', revision: '{{ site.time | date: "%Y%m%d%H%M" }}' },
   { url: '/cart/', revision: '{{ site.time | date: "%Y%m%d%H%M" }}' },
   { url: '/checkout/', revision: '{{ site.time | date: "%Y%m%d%H%M" }}' },
   { url: '/css/main.css', revision: '{{ site.time | date: "%Y%m%d%H%M" }}' }

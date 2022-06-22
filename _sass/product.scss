@@ -5,6 +5,8 @@
     flex-wrap: nowrap!important;
   }
 
+.hidden {display:none;}
+
   .product-image {
     @media (min-width: 800px) {
       flex-basis: 500px;
