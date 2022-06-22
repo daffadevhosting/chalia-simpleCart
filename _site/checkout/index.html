@@ -120,7 +120,7 @@ $(document).ready(function(){
 
       <div class="site-inner">
   <div class="wrap">
-    <div class="content-sidebar-wrap">
+    <div class="content-sidebar-wrap product-post">
 
       <main class="content">
         <article class="page entry" itemscope itemtype="http://schema.org/CreativeWork">
@@ -130,7 +130,13 @@ $(document).ready(function(){
           </header>
 
           <div class="entry-content" itemprop="text">
-            <div class="harga-total">
+             <script src="https://www.google.com/recaptcha/api.js"></script>
+ <script>
+   function onSubmit(token) {
+     document.getElementById("order").submit();
+   }
+ </script>
+<div class="harga-total">
    <span>Total Pembelian </span><span class="simpleCart_quantity"></span> Bungkus : <span class="simpleCart_total"></span><br />
 <span style="font-size:10px;">( *Belum Termasuk Ongkir )</span>
 </div>
@@ -170,15 +176,12 @@ $(document).ready(function(){
   <input id="provinsi" class="provinsi wajib" placeholder="Provinsi">
   <input id="kodepos" class="kodepos wajib" placeholder="Kode Pos">
 
-  <a class="button order" id='order'>Send Order</a>
+<button class="g-recaptcha order" 
+        data-sitekey="6LfBwY0gAAAAACtYEWE7BXgxd5Nh-xPI9-VWmHSp" 
+        data-callback='order' 
+        data-action='submit'>Order</button>
 </form>
 <style>.grecaptcha-badge{z-index:1;}</style>
-<div class="g-recaptcha"
-      data-sitekey=""
-      data-callback="onSubmit"
-      data-size="invisible">
-</div>
-<script>grecaptcha.execute();</script>
 
 
           </div>

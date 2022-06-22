@@ -247,6 +247,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+    margin-top: 4%;
 }
 
 .notif {
@@ -273,4 +274,9 @@ li {
     object-position: center;
   @include mobile {
     height: 350px;}
+}
+
+.product-post {
+    @include mobile {
+    padding: 0 5%;}
 }
