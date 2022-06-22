@@ -110,12 +110,19 @@ li {
     height: 240px;
     width: 100%;
     object-position: center;
+  @include mobile {
+    height: 180px;}
     }
 
   .entry {
     margin-bottom: 40px;
     background: #e96125;
     color: #fff;
+    width: 360px;
+  @include mobile {
+    max-width: 48%;
+    margin: 2px;
+    width: 100%;}
 
     &:nth-child(3n+4) {
       /*margin-left: 0;*/
@@ -125,6 +132,9 @@ li {
     display: flex;
     width: 100%;
     padding: 0 10px;
+  @include mobile {
+    text-align: center;
+    flex-wrap: wrap;}
     }
 
   }
@@ -132,10 +142,15 @@ li {
   .product-name {
     float: left;
     width: 70%;
+  @include mobile {
+    width: 100%;
+    float: none;}
 
     h4 {
       margin-bottom: 0;
       font-size: 18px;
+  @include mobile {
+      font-size: 16px;}
         a{color:$white;}
     }
 
@@ -146,6 +161,8 @@ li {
     width: 30%;
     text-align: right;
     font-size: initial;
+  @include mobile {
+    width: 100%;}
 
     p {
       margin-bottom: 0;

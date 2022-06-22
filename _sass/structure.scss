@@ -106,7 +106,8 @@ img {
     max-width: 1280px;
   }
   @include mobile {
-    margin: 10px auto;}
+    margin: 10px auto;
+  padding: 0;}
 }
 
 .site-inner {
@@ -128,6 +129,12 @@ img {
     width: 70%;
     margin-bottom: 0;
   }
+  @include mobile {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 6px;
+    padding: 1%;
+    justify-content: space-between;}
 }
 
 .full-width-content .content {
