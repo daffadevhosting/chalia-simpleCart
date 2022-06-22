@@ -1,12 +1,10 @@
+.hidden {display:none;}
 .single-product {
   width: 100%;
-  @media (min-width: 800px) {
-    display: flex;
-    flex-wrap: nowrap!important;
-  }
-
+  @include mobile {
+    display:block;
+    margin-top: 20px;}
 .hidden {display:none;}
-
   .product-image {
     @media (min-width: 800px) {
       flex-basis: 500px;
@@ -15,7 +13,8 @@
 
   .product-details {
     @media (min-width: 800px) {
-      margin-left: 40px;
+    margin-left: 40px;
+    width: 50%;
     }
 
   }
@@ -26,6 +25,8 @@
 
   .entry-title {
     margin-top: 0;
+  @include mobile {
+    margin-top: 20px;}
     @media (min-width: 1000px) {
       font-size: 40px;
     }
@@ -104,6 +105,9 @@ li {
       display: flex;
       flex-wrap: wrap;
     }
+    @media (width: 820px) {
+      flex-wrap: nowrap;
+    }
   }
     .img-thumb {
     object-fit: cover;
@@ -118,7 +122,10 @@ li {
     margin-bottom: 40px;
     background: #e96125;
     color: #fff;
-    width: 360px;
+    width: 100%;
+    max-width: 353px;
+    @media (width: 820px) {
+    width: 100%;}
   @include mobile {
     max-width: 48%;
     margin: 2px;
@@ -269,7 +276,7 @@ li {
 
 .img-product {
     object-fit: cover;
-    height: 400px;
+    height: 455px;
     width: 100%;
     object-position: center;
   @include mobile {

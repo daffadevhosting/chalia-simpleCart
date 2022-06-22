@@ -138,6 +138,8 @@ li {
   border-radius: 5px;
   margin: 0px auto;
   overflow: hidden;
+    @media (min-width: 800px) {
+  margin: 0px;}
 }
 
 .simpliCard {
