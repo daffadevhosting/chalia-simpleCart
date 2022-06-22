@@ -48,12 +48,15 @@ sitemap: false
   <input id="provinsi" class="provinsi wajib" placeholder="Provinsi">
   <input id="kodepos" class="kodepos wajib" placeholder="Kode Pos">
 
-<a class="g-recaptcha order button" 
-        data-sitekey="{{site.sitekey}}" 
-        data-callback='order' 
-        data-action='AdminToko'>Order</a>
+<a class="button order" id='order'>Send Order</a>
 </form>
 <style>.grecaptcha-badge{z-index:1;}</style>
+<div class="g-recaptcha"
+      data-sitekey="{{site.sitekey}}"
+      data-callback="order"
+      data-size="invisible">
+</div>
+<script>grecaptcha.execute();</script>
 
-  <!--<a class="button order" id='order'>Send Order</a>-->
+  <!---->
 
